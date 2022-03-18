@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+
+
+<!-- === Header Starts === -->
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <title>PadInv</title>
+
+  <link href="./assets/bootstrap.min.css" rel="stylesheet">
+  <link href="./assets/font.css" rel="stylesheet" type="text/css">
+  <link href="./assets/style.css" rel="stylesheet" type="text/css">
+</head>
+<!-- === Header Ends === -->
+
+
+<body>
+
+
+<!-- === Home Section Starts === -->
+<div class="section">
+  <!-- === Title Starts === -->
+  <div class="header">
+    <div class="logo">
+      <a href="https://sites.google.com/view/iigroup-thu" target="_blank"><img src="./assets/tsinghua.png"></a>
+    </div>
+    <div class="title", style="padding-top: 25pt;">  <!-- Set padding as 10 if title is with two lines. -->
+      High-fidelity GAN Inversion with Padding Space
+    </div>
+  </div>
+  <!-- === Title Ends === -->
+  <div class="author">
+    <a href="" target="_blank">Qingyan Bai*</a><sup>1</sup>,&nbsp;
+    <a href="https://justimyhxu.github.io" target="_blank">Yinghao Xu*</a><sup>2</sup>,&nbsp;
+    <a href="" target="_blank">Jiapeng Zhu</a><sup>3</sup>,&nbsp;
+    <a href="https://xiaweihao.com/" target="_blank">Weihao Xia</a><sup>4</sup>,&nbsp;
+    <a href="https://sites.google.com/view/iigroup-thu" target="_blank">Yujiu Yang</a><sup>1</sup>,&nbsp;
+    <a href="http://shenyujun.github.io/" target="_blank">Yujun Shen</a><sup>5</sup>
+  </div>
+  <div class="institution">
+    <sup>1</sup> Tsinghua University&nbsp;&nbsp;
+    <sup>2</sup> CUHK&nbsp;&nbsp;
+    <sup>3</sup> HKUST&nbsp;&nbsp;
+    <sup>4</sup> UCL&nbsp;&nbsp;
+    <sup>5</sup> ByteDance Inc.<br>
+  </div>
+  <div class="link">
+    <a href="https://arxiv.org/" target="_blank">[Paper]</a>&nbsp;&nbsp;
+    <a href="https://github.com/" target="_blank">[Code]</a>
+
+  </div>
+  <div class="teaser">
+    <img src="./assets/framework.png">
+  </div>
+</div>
+<!-- === Home Section Ends === -->
+
+
+<!-- === Overview Section Starts === -->
+<div class="section">
+  <div class="title">Overview</div>
+  <div class="body">
+      This paper aims at achieving high-fidelity GAN Inversion and manipulation. 
+      We propose to involve the padding space of the generator to complement the latent space with spatial information. 
+      Concretely, we replace the constant padding (e.g., usually zeros) used in convolution layers with some instance- aware coefficients. 
+      In this way, the inductive bias assumed in the pre- trained model can be appropriately adapted to fit each individual image. 
+      Through learning a carefully designed encoder, we manage to improve the inversion quality both qualitatively and quantitatively, outperforming existing alternatives. 
+      We then demonstrate that such a space extension barely affects the native GAN manifold, hence we can still reuse the prior knowledge learned by GANs for various downstream applications. 
+      Beyond the editing tasks explored in prior arts, our approach allows a more flexible image manipulation, such as the separate control of face contour and facial details, and enables a novel editing manner where users can customize their own manipulations highly efficiently.
+  </div>
+</div>
+<!-- === Overview Section Ends === -->
+
+
+<!-- === Result Section Starts === -->
+<div class="section">
+  <div class="title">Results</div>
+  <div class="body">
+    Teaser including results of inversion, face blending, and customized editing.
+
+    <table width="100%" style="margin: 20pt 0; text-align: center;">
+      <tr>
+        <td><img src="./assets/teaser.png" width="80%"></td>
+      </tr>
+    </table>
+
+    Inversion Results.
+
+    <table width="100%" style="margin: 20pt 0; text-align: center;">
+      <tr>
+        <td><img src="./assets/inversion.png" width="85%"></td>
+      </tr>
+    </table>
+      
+    Face blending results.
+
+    <table width="100%" style="margin: 20pt 0; text-align: center;">
+      <tr>
+        <td><img src="./assets/face_blending.png" width="85%"></td>
+      </tr>
+    </table>
+      
+    Manipulation with one pair of customized images.
+
+    <table width="100%" style="margin: 20pt 0; text-align: center;">
+      <tr>
+        <td><img src="./assets/customized_editing.png" width="85%"></td>
+      </tr>
+    </table>
+      
+    More results of customized editing.
+
+    <table width="100%" style="margin: 20pt 0; text-align: center;">
+      <tr>
+        <td><img src="./assets/customized_editing_more.png" width="85%"></td>
+      </tr>
+    </table>
+      
+  </div>
+</div>
+<!-- === Result Section Ends === -->
+
+
+<!-- === Reference Section Starts === -->
+<div class="section">
+  <div class="bibtex">BibTeX</div>
+<pre>
+@article{bai2022padinv,
+  title   = {High-fidelity GAN Inversion with Padding Space},
+  author  = {Bai, Qingyan and Xu, Yinghao and Zhu, Jiapeng and Xia, Weihao and Yang, Yujiu and Shen, Yujun},
+  article = {arXiv preprint arXiv:TODO},
+  year    = {2022}
+}
+</pre>
+
+  <!-- BZ: we should give other related work enough credits, -->
+  <!--     so please include some most relevant work and leave some comment to summarize work and the difference. -->
+  <div class="ref">Related Work</div>
+
+  <div class="citation">
+    <div class="image"><img src="./assets/inductive_bias.png"></div>
+    <div class="comment">
+      <a href="https://arxiv.org/abs/2012.05217" target="_blank">
+        Rui Xu, Xintao Wang, Kai Chen, Bolei Zhou, Chen Change Loy.
+        Positional Encoding as Spatial Inductive Bias in GANs.
+        CVPR, 2021.</a><br>
+      <b>Comment:</b>
+      Proposes positional encoding is indispensable for generating images with high fidelity and zero-padding is not sufficient.
+    </div>
+  </div>
+
+
+  <div class="citation">
+    <div class="image"><img src="./assets/pSp.png"></div>
+    <div class="comment">
+      <a href="https://arxiv.org/abs/2008.00951" target="_blank">
+        Elad Richardson, Yuval Alaluf, Or Patashnik, Yotam Nitzan, Yaniv Azar, Stav Shapiro, Daniel Cohen-Or.
+        Encoding in style: a stylegan encoder for image-to-image translation.
+        CVPR, 2021.</a><br>
+      <b>Comment:</b>
+      Proposes an encoder for image translation tasks.
+    </div>
+  </div>
+
+  <div class="citation">
+    <div class="image"><img src="./assets/IDInvert.png"></div>
+    <div class="comment">
+      <a href="https://arxiv.org/abs/2004.00049" target="_blank">
+        Jiapeng Zhu, Yujun Shen, Deli Zhao, Bolei Zhou.
+        In-Domain GAN Inversion for Real Image Editing.
+        ECCV, 2020.</a><br>
+      <b>Comment:</b>
+      Proposes an in-domain GAN inversion approach for inversion and real image editing.
+    </div>
+  </div>
+    
+  <div class="citation">
+    <div class="image"><img src="./assets/e4e.png"></div>
+    <div class="comment">
+      <a href="https://arxiv.org/abs/2102.02766" target="_blank">
+        Omer Tov, Yuval Alaluf, Yotam Nitzan, Or Patashnik, Daniel Cohen-Or.
+        Designing an encoder for StyleGAN image manipulation.
+        TOG, 2021.</a><br>
+      <b>Comment:</b>
+      Proposes an encoder with better editability by encouraging the latent codes to be subject to the native distribution.
+    </div>
+  </div>
+
+
+</div>
+<!-- === Reference Section Ends === -->
+
+</body>
+</html>

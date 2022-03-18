@@ -15,19 +15,19 @@ This paper aims at achieving high-fidelity GAN Inversion and manipulation. We pr
 
 Teaser.
 
-![image]()
+![image](./docs/assets/teaser.png)
 
 Inversion Results.
 
-![image]()
+![image](./docs/assets/inversion.png)
 
 Face blending results.
 
-![image]()
+![image](./docs/assets/face_blending.png)
 
 Manipulation with one pair of customized images.
 
-![image]()
+![image](./docs/assets/customized_editing.png)
 
 ## Code Coming Soon
 
