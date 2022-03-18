@@ -4,7 +4,7 @@
 > Qingyan Bai*, Yinghao Xu*, Jiapeng Zhu, Weihao Xia, Yujiu Yang, Yujun Shen <br>
 > *arXiv preprint arXiv:*
 
-![image](TODO)
+![image](./docs/assets/framework.png)
 
 [[Paper]()]
 [[Project Page]()]
