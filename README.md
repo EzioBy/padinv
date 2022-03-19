@@ -2,30 +2,31 @@
 
 > **High-fidelity GAN Inversion with Padding Space** <br>
 > Qingyan Bai*, Yinghao Xu*, Jiapeng Zhu, Weihao Xia, Yujiu Yang, Yujun Shen <br>
-> *arXiv preprint arXiv:*
+> *arXiv preprint arXiv:TODO*
 
 ![image](./docs/assets/framework.png)
+**Figure:** Our encoder produces instance-aware coefficients to replace the fixed padding used in the generator. Such a design improves GAN inversion with better spatial details.
 
-[[Paper]()]
-[[Project Page]()]
+[[Paper](https://arxiv.org/pdf/TODO.pdf)]
+[[Project Page](https://ezioby.github.io/padinv/)]
 
-This paper aims at achieving high-fidelity GAN Inversion and manipulation. We propose to involve the padding space of the generator to complement the latent space with spatial information. Concretely, we replace the constant padding (e.g., usually zeros) used in convolution layers with some instance- aware coefficients. In this way, the inductive bias assumed in the pre- trained model can be appropriately adapted to fit each individual image. Through learning a carefully designed encoder, we manage to improve the inversion quality both qualitatively and quantitatively, outperforming existing alternatives. We then demonstrate that such a space extension barely affects the native GAN manifold, hence we can still reuse the prior knowledge learned by GANs for various downstream applications. Beyond the editing tasks explored in prior arts, our approach allows a more flexible image manipulation, such as the separate control of face contour and facial details, and enables a novel editing manner where users can customize their own manipulations highly efficiently.
+In this work, we propose to involve the **padding space** of the generator to complement the native latent space, facilitating high-fidelity GAN inversion. Concretely, we replace the constant padding (*e.g.*, usually zeros) used in convolution layers with some instance-aware coefficients. In this way, the inductive bias assumed in the pre-trained model can be appropriately adapted to fit each individual image. We demonstrate that such a space extension allows a more flexible image manipulation, such as the **separate control** of face contour and facial details, and enables a **novel editing manner** where users can *customize* their own manipulations highly efficiently.
 
 ## Qualitative Results
 
-Teaser.
+From top to bottom: (a) high-fidelity GAN inversion with spatial details, (b) face blending with contour from one image and details from another, and (c) customized manipulations *with one image pair*.
 
 ![image](./docs/assets/teaser.png)
 
-Inversion Results.
+More inversion results.
 
 ![image](./docs/assets/inversion.png)
 
-Face blending results.
+More face blending results.
 
 ![image](./docs/assets/face_blending.png)
 
-Manipulation with one pair of customized images.
+More customized editing results.
 
 ![image](./docs/assets/customized_editing.png)
 

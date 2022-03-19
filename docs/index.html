@@ -31,23 +31,23 @@
   </div>
   <!-- === Title Ends === -->
   <div class="author">
-    <a href="" target="_blank">Qingyan Bai*</a><sup>1</sup>,&nbsp;
-    <a href="https://justimyhxu.github.io" target="_blank">Yinghao Xu*</a><sup>2</sup>,&nbsp;
-    <a href="" target="_blank">Jiapeng Zhu</a><sup>3</sup>,&nbsp;
-    <a href="https://xiaweihao.com/" target="_blank">Weihao Xia</a><sup>4</sup>,&nbsp;
-    <a href="https://sites.google.com/view/iigroup-thu" target="_blank">Yujiu Yang</a><sup>1</sup>,&nbsp;
+    <a href="" target="_blank">Qingyan Bai*</a><sup>1</sup>&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="https://justimyhxu.github.io" target="_blank">Yinghao Xu*</a><sup>2</sup>&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="" target="_blank">Jiapeng Zhu</a><sup>3</sup>&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="https://xiaweihao.com/" target="_blank">Weihao Xia</a><sup>4</sup>&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="https://sites.google.com/view/iigroup-thu" target="_blank">Yujiu Yang</a><sup>1</sup>&nbsp;&nbsp;&nbsp;&nbsp;
     <a href="http://shenyujun.github.io/" target="_blank">Yujun Shen</a><sup>5</sup>
   </div>
   <div class="institution">
-    <sup>1</sup> Tsinghua University&nbsp;&nbsp;
-    <sup>2</sup> CUHK&nbsp;&nbsp;
-    <sup>3</sup> HKUST&nbsp;&nbsp;
-    <sup>4</sup> UCL&nbsp;&nbsp;
+    <sup>1</sup> Tsinghua University&nbsp;&nbsp;&nbsp;&nbsp;
+    <sup>2</sup> CUHK&nbsp;&nbsp;&nbsp;&nbsp;
+    <sup>3</sup> HKUST&nbsp;&nbsp;&nbsp;&nbsp;
+    <sup>4</sup> UCL&nbsp;&nbsp;&nbsp;&nbsp;
     <sup>5</sup> ByteDance Inc.<br>
   </div>
   <div class="link">
     <a href="https://arxiv.org/" target="_blank">[Paper]</a>&nbsp;&nbsp;
-    <a href="https://github.com/" target="_blank">[Code]</a>
+    <a href="https://github.com/EzioBy/padinv" target="_blank">[Code]</a>
 
   </div>
   <div class="teaser">
@@ -61,13 +61,7 @@
 <div class="section">
   <div class="title">Overview</div>
   <div class="body">
-      This paper aims at achieving high-fidelity GAN Inversion and manipulation. 
-      We propose to involve the padding space of the generator to complement the latent space with spatial information. 
-      Concretely, we replace the constant padding (e.g., usually zeros) used in convolution layers with some instance- aware coefficients. 
-      In this way, the inductive bias assumed in the pre- trained model can be appropriately adapted to fit each individual image. 
-      Through learning a carefully designed encoder, we manage to improve the inversion quality both qualitatively and quantitatively, outperforming existing alternatives. 
-      We then demonstrate that such a space extension barely affects the native GAN manifold, hence we can still reuse the prior knowledge learned by GANs for various downstream applications. 
-      Beyond the editing tasks explored in prior arts, our approach allows a more flexible image manipulation, such as the separate control of face contour and facial details, and enables a novel editing manner where users can customize their own manipulations highly efficiently.
+    This work targets high-fidelity GAN inversion with better recovered spatial details. For this purpose, we propose to involve the <i>padding space</i> of the generator to complement the native latent space. Concretely, we replace the constant padding (<i>e.g.</i>, usually zeros) used in convolution layers with some instance-aware coefficients. In this way, the inductive bias assumed in the pre-trained model can be appropriately adapted to fit each individual image. We demonstrate that such a space extension allows a more flexible image manipulation, such as the <i>separate control</i> of face contour and facial details, and enables a <i>novel editing manner</i> where users can <i>customize</i> their own manipulations highly efficiently.
   </div>
 </div>
 <!-- === Overview Section Ends === -->
@@ -77,46 +71,38 @@
 <div class="section">
   <div class="title">Results</div>
   <div class="body">
-    Teaser including results of inversion, face blending, and customized editing.
+    Our method allows (a) <b>high-fidelity GAN inversion</b> with better spatial details, and enables <b>two novel applications</b> including (b) face blending and (c) customizing manipulations with one image pair.
 
     <table width="100%" style="margin: 20pt 0; text-align: center;">
       <tr>
-        <td><img src="./assets/teaser.png" width="80%"></td>
+        <td><img src="./assets/teaser.png" width="100%"></td>
       </tr>
     </table>
 
-    Inversion Results.
-
-    <table width="100%" style="margin: 20pt 0; text-align: center;">
-      <tr>
-        <td><img src="./assets/inversion.png" width="85%"></td>
-      </tr>
-    </table>
-      
-    Face blending results.
+    More <b>inversion</b> results on human faces, outdoor churches, and indoor bedrooms.
 
     <table width="100%" style="margin: 20pt 0; text-align: center;">
       <tr>
-        <td><img src="./assets/face_blending.png" width="85%"></td>
+        <td><img src="./assets/inversion.png" width="100%"></td>
       </tr>
     </table>
-      
-    Manipulation with one pair of customized images.
+
+    More <b>face blending</b> results by borrowing face contour from one image and facial details from another.
 
     <table width="100%" style="margin: 20pt 0; text-align: center;">
       <tr>
-        <td><img src="./assets/customized_editing.png" width="85%"></td>
+        <td><img src="./assets/face_blending.png" width="100%"></td>
       </tr>
     </table>
-      
-    More results of customized editing.
+
+    More <b>customized editing</b> results, where each manipulation is defined by a simple image pair. Such a pair can be created highly efficiently either by graphics editors (like Photoshop) or by the convenient copy-and-paste.
 
     <table width="100%" style="margin: 20pt 0; text-align: center;">
       <tr>
-        <td><img src="./assets/customized_editing_more.png" width="85%"></td>
+        <td><img src="./assets/customized_editing_more.png" width="100%"></td>
       </tr>
     </table>
-      
+
   </div>
 </div>
 <!-- === Result Section Ends === -->
@@ -174,7 +160,7 @@
       Proposes an in-domain GAN inversion approach for inversion and real image editing.
     </div>
   </div>
-    
+
   <div class="citation">
     <div class="image"><img src="./assets/e4e.png"></div>
     <div class="comment">
