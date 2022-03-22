@@ -2,7 +2,7 @@
 
 > **High-fidelity GAN Inversion with Padding Space** <br>
 > Qingyan Bai*, Yinghao Xu*, Jiapeng Zhu, Weihao Xia, Yujiu Yang, Yujun Shen <br>
-> *arXiv preprint arXiv:TODO*
+> *arXiv preprint arXiv:2203.11105*
 
 ![image](./docs/assets/framework.png)
 **Figure:** Our encoder produces instance-aware coefficients to replace the fixed padding used in the generator. Such a design improves GAN inversion with better spatial details.
