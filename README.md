@@ -42,7 +42,7 @@ For pre-trained GAN checkpoints, you can download them here:
 [StyleGAN2-Bedroom](https://drive.google.com/file/d/1LTEU2Dt2pyJTHHUTjwFWAkmNco3EXmfL/view?usp=sharing).
 
 ## Training
-####Training Scripts
+#### Training Scripts
 Please use the following scripts to train PadInv corresponding to various domains.  
 ```
 # Face
@@ -61,7 +61,7 @@ For training and testing on LSUN, we support direct reading the LMDB directory t
 'your_gan_ckp_path' indicates the path of the pre-trained GAN checkpoint to be inverted. 
 'your_job_name' indicates the name of this training job and the name of the job working directory.
 
-####Results
+#### Results
 1. Testing metric results and visualization results of inversion can be found in ```work_dir/your_job_name/results/```.
 2. The training log is saved at ```work_dir/your_job_name/log.txt```.
 3. Checkpoints can be found in ```work_dir/your_job_name/checkpoints/```. 
