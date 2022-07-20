@@ -55,10 +55,9 @@ bash scripts/encoder_scipts/encoder_stylegan2_bedroom_train.sh 8 your_training_s
 In scripts above, '8' indicates the gpu amount for training. 
 'your_training_set_path' and 'your_test_set_path' indicate the dataset paths 
 (e.g. ```data/ffhq.zip, data/CelebA-HQ-test```, or ```data/bedroom_train_lmdb```).
-For training and testing on LSUN, we support direct reading the LMDB directory thanks to 
+For training and testing on LSUN, we support reading the LMDB directory thanks to 
 [Hammer](https://github.com/bytedance/Hammer). 
- 
-'your_gan_ckp_path' indicates the path of the pre-trained GAN checkpoint to be inverted. 
+ 'your_gan_ckp_path' indicates the path of the pre-trained GAN checkpoint to be inverted. 
 'your_job_name' indicates the name of this training job and the name of the job working directory.
 
 #### Results
