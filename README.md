@@ -31,7 +31,7 @@ Additional customized editing results.
 ![image](./docs/assets/customized_editing.png)
 
 ## Preparation
-To train or test PadInv, preparing the data and pre-trained GAN checkpoints are needed at first.
+To train or test PadInv, preparing the data and pre-trained GAN checkpoints is needed at first.
 
 For data, please download FFHQ and CelebA-HQ-testset for face domain, 
 and LSUN Church and Bedroom for indoor and outdoor scene, respectively.
@@ -65,7 +65,6 @@ For training and testing on LSUN, we support reading the LMDB directory thanks t
 2. The training log is saved at ```work_dir/your_job_name/log.txt```.
 3. Checkpoints can be found in ```work_dir/your_job_name/checkpoints/```. 
 Note that we save the checkpoints corresponding to the best metrics and the latest ones.
-
 
 
 ## BibTeX
