@@ -7,8 +7,10 @@
 ![image](./docs/assets/framework.png)
 **Figure:** Our encoder produces instance-aware coefficients to replace the fixed padding used in the generator. Such a design improves GAN inversion with better spatial details.
 
-[[Paper](https://arxiv.org/pdf/2203.11105.pdf)]
+[[Paper](https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136750036.pdf)]
 [[Project Page](https://ezioby.github.io/padinv/)]
+[[ArXiv Paper with Supp](https://arxiv.org/abs/2203.11105)]
+[[ECVA Link](https://www.ecva.net/papers/eccv_2022/papers_ECCV/html/877_ECCV_2022_paper.php)]
 
 In this work, we propose to involve the **padding space** of the generator to complement the native latent space, facilitating high-fidelity GAN inversion. Concretely, we replace the constant padding (*e.g.*, usually zeros) used in convolution layers with some instance-aware coefficients. In this way, the inductive bias assumed in the pre-trained model can be appropriately adapted to fit each individual image. We demonstrate that such a space extension allows a more flexible image manipulation, such as the **separate control** of face contour and facial details, and enables a **novel editing manner** where users can *customize* their own manipulations highly efficiently.
 
