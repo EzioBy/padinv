@@ -73,11 +73,13 @@ Note that we save the checkpoints corresponding to the best metrics and the late
 
 If you find our work or code helpful for your research, please consider to cite:
 ```bibtex
-@article{bai2022high,
-  title   = {High-fidelity GAN Inversion with Padding Space},
-  author  = {Bai, Qingyan and Xu, Yinghao and Zhu, Jiapeng and Xia, Weihao and Yang, Yujiu and Shen, Yujun},
-  journal = {arXiv preprint arXiv:2203.11105},
-  year    = {2022}
+@inproceedings{bai2022high,
+  title={High-fidelity GAN inversion with padding space},
+  author={Bai, Qingyan and Xu, Yinghao and Zhu, Jiapeng and Xia, Weihao and Yang, Yujiu and Shen, Yujun},
+  booktitle={European Conference on Computer Vision},
+  pages={36--53},
+  year={2022},
+  organization={Springer}
 }
 ```
 
